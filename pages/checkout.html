@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Peripheral Hub</title>
+    <link rel="stylesheet" href="../styles/checkout.css">
+</head>
+
+<body>
+
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <div class="checkout-details">
+            <!-- Product Summary -->
+            <div class="product-summary" id="productSummary">
+                <h3>Your Order</h3>
+                <ul id="productList">
+                    <!-- Product items will be dynamically inserted here -->
+                </ul>
+                <div class="total-price">
+                    <h4>Total: <span id="totalPrice">$0.00</span></h4>
+                </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <h3>Payment Details</h3>
+                <input type="text" placeholder="Cardholder's Name" required>
+                <input type="text" placeholder="Card Number" maxlength="16" required>
+                <input type="text" placeholder="Expiration Date (MM/YY)" maxlength="5" required>
+                <input type="text" placeholder="CVC" maxlength="3" required>
+                <input type="email" id="emailInput" placeholder="Email for Receipt" required>
+                <button onclick="pay()">Pay</button>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <h2>Purchase Successful!</h2>
+            <p>A receipt and more information have been sent to <span id="customerEmail"></span>. Thank you for your order!</p>
+            <button onclick="returnToStore()">Return to Store</button>
+        </div>
+    </div>
+
+    <script src="../scripts/checkout.js"></script>
+
+</body>
+
+</html>

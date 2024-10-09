@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peripheral Hub - Work With Us</title>
+    <link rel="stylesheet" href="../styles/work-with-us.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Work With Us</h1>
+    </header>
+
+    <form id="jobApplicationForm">
+        <h2>Apply to Join Our Team</h2>
+        <p class="error" id="error"></p>
+        
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" placeholder="Your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Your email address" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Your phone number" required>
+
+        <label for="position">Position Applying For:</label>
+        <input type="text" id="position" placeholder="Position you're applying for" required>
+
+        <label for="experience">Work Experience (Brief Summary):</label>
+        <textarea id="experience" placeholder="Describe your experience" rows="4" required></textarea>
+
+        <label for="linkedin">LinkedIn Profile (optional):</label>
+        <input type="url" id="linkedin" placeholder="LinkedIn profile URL">
+
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <!-- Return to About Page Button -->
+    <button id="returnButton" onclick="returnToAbout()">Return to About Page</button>
+
+    <script src="../scripts/work-with-us.js"></script>
+
+</body>
+
+</html>

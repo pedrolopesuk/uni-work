@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Corner</title>
+    <link rel="stylesheet" href="../styles/styles.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>The PC Corner</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button>Search</button>
+            </div>
+            <div class="cart-icon" onclick="openCart()">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </div>
+        </nav>
+
+        <!-- Horizontal Navigation Menu Below the Search Bar -->
+        <div class="navigation-menu">
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="shop.html">Deals</a></li>
+                <li><a href="contact.html">Customer Service</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <img src="../resources/slider1.jpeg" alt="Slide 1">
+            <img src="../resources/slider2.jpeg" alt="Slide 2">
+            <img src="../resources/slider3.jpeg" alt="Slide 3">
+            <img src="../resources/slider4.jpeg" alt="Slide 4">
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="main-content">
+        <!-- Sidebar Categories -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#">Keyboards</a></li>
+                <li><a href="#">Mice</a></li>
+                <li><a href="#">Headsets</a></li>
+                <li><a href="#">Monitors</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Listing -->
+        <section class="products">
+            <div class="product-card">
+                <img src="../resources/teclado-mecanico1.jpeg" alt="Mechanical Keyboard">
+                <h3>Mechanical Keyboard</h3>
+                <p>Durable and responsive for gamers and professionals.</p>
+                <p class="price">$129.99</p>
+                <button onclick="addToCart(this, 'Mechanical Keyboard', 129.99)">Add to Cart</button>
+                <p class="review">⭐⭐⭐⭐⭐ (200 reviews)</p>
+            </div>
+            <div class="product-card">
+                <img src="../resources/mouse1.jpeg" alt="Gaming Mouse">
+                <h3>Gaming Mouse</h3>
+                <p>High precision with customizable buttons.</p>
+                <p class="price">$49.99</p>
+                <button onclick="addToCart(this, 'Gaming Mouse', 49.99)">Add to Cart</button>
+                <p class="review">⭐⭐⭐⭐ (150 reviews)</p>
+            </div>
+            <div class="product-card">
+                <img src="../resources/headset1.jpeg" alt="Gaming Headset">
+                <h3>Gaming Headset</h3>
+                <p>Immersive sound with a noise-canceling microphone.</p>
+                <p class="price">$89.99</p>
+                <button onclick="addToCart(this, 'Gaming Headset', 89.99)">Add to Cart</button>
+                <p class="review">⭐⭐⭐⭐⭐ (180 reviews)</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="see-more">
+        <button onclick="location.href='../pages/shop.html'">See More Products</button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeCart()">&#10005;</button> <!-- Close Button -->
+            <div class="product-list">
+                <ul id="cartItems"></ul>
+            </div>
+            <div class="summary">
+                <h2>Summary</h2>
+                <p id="subtotal">Subtotal: $0.00</p>
+                <p id="tax">Tax: $0.00</p>
+                <p id="delivery">Delivery: $5.00</p>
+                <p class="total" id="total">Total: $5.00</p>
+                <button id="checkoutButton" onclick="proceedToCheckout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Message -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Peripheral Hub - All Rights Reserved</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="../scripts/index.js"></script> <!-- Link to external JavaScript -->
+</body>
+
+</html>
