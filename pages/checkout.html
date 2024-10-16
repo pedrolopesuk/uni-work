@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Peripheral Hub</title>
+    <title>Finalizar Compra - Hub Periférico</title>
     <link rel="stylesheet" href="../styles/checkout.css">
 </head>
 
 <body>
 
     <div class="checkout-container">
-        <h1>Checkout</h1>
+        <h1>Finalizar Compra</h1>
         <div class="checkout-details">
-            <!-- Product Summary -->
+            <!-- Resumo do Produto -->
             <div class="product-summary" id="productSummary">
-                <h3>Your Order</h3>
+                <h3>Seu Pedido</h3>
                 <ul id="productList">
-                    <!-- Product items will be dynamically inserted here -->
+                    <!-- Itens do produto serão inseridos dinamicamente aqui -->
                 </ul>
                 <div class="total-price">
-                    <h4>Total: <span id="totalPrice">$0.00</span></h4>
+                    <h4>Total: <span id="totalPrice">R$0,00</span></h4>
                 </div>
             </div>
 
-            <!-- Payment Section -->
+            <!-- Seção de Pagamento -->
             <div class="payment-section">
-                <h3>Payment Details</h3>
-                <input type="text" placeholder="Cardholder's Name" required>
-                <input type="text" placeholder="Card Number" maxlength="16" required>
-                <input type="text" placeholder="Expiration Date (MM/YY)" maxlength="5" required>
+                <h3>Detalhes do Pagamento</h3>
+                <input type="text" placeholder="Nome do Titular do Cartão" required>
+                <input type="text" placeholder="Número do Cartão" maxlength="16" required>
+                <input type="text" placeholder="Data de Validade (MM/AA)" maxlength="5" required>
                 <input type="text" placeholder="CVC" maxlength="3" required>
-                <input type="email" id="emailInput" placeholder="Email for Receipt" required>
-                <button onclick="pay()">Pay</button>
+                <input type="email" id="emailInput" placeholder="Email para Recibo" required>
+                <button onclick="pay()">Pagar</button>
                 <div class="loading" id="loading">
                     <div class="spinner"></div>
                 </div>
@@ -40,9 +40,9 @@
         </div>
 
         <div class="success-message" id="successMessage">
-            <h2>Purchase Successful!</h2>
-            <p>A receipt and more information have been sent to <span id="customerEmail"></span>. Thank you for your order!</p>
-            <button onclick="returnToStore()">Return to Store</button>
+            <h2>Compra Realizada com Sucesso!</h2>
+            <p>Um recibo e mais informações foram enviados para <span id="customerEmail"></span>. Obrigado pelo seu pedido!</p>
+            <button onclick="returnToStore()">Voltar à Loja</button>
         </div>
     </div>
 
