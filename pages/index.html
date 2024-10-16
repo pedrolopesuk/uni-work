@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Corner</title>
-    <link rel="stylesheet" href="../styles/styles.css"> <!-- Link to external CSS -->
+    <title>Canto do PC</title>
+    <link rel="stylesheet" href="../styles/styles.css"> <!-- Link para CSS externo -->
 </head>
 
 <body>
@@ -13,30 +13,30 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>The PC Corner</h1>
+                <h1>O Canto do PC</h1>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Search for products...">
-                <button>Search</button>
+                <input type="text" placeholder="Pesquise por produtos...">
+                <button>Buscar</button>
             </div>
             <div class="cart-icon" onclick="openCart()">
-                🛒 Cart (<span id="cartCount">0</span>)
+                🛒 Carrinho (<span id="cartCount">0</span>)
             </div>
         </nav>
 
-        <!-- Horizontal Navigation Menu Below the Search Bar -->
+        <!-- Menu de Navegação Horizontal Abaixo da Barra de Pesquisa -->
         <div class="navigation-menu">
             <ul>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="shop.html">Deals</a></li>
-                <li><a href="contact.html">Customer Service</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="shop.html">Loja</a></li>
+                <li><a href="shop.html">Ofertas</a></li>
+                <li><a href="contact.html">Atendimento ao Cliente</a></li>
+                <li><a href="about.html">Sobre nós</a></li>
+                <li><a href="contact.html">Fale Conosco</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Slider Section -->
+    <!-- Seção do Slider -->
     <div class="slider">
         <div class="slides">
             <img src="../resources/slider1.jpeg" alt="Slide 1">
@@ -45,89 +45,89 @@
             <img src="../resources/slider4.jpeg" alt="Slide 4">
         </div>
 
-        <!-- Slider Controls -->
+        <!-- Controles do Slider -->
         <button class="prev" onclick="prevSlide()">&#10094;</button>
         <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
 
     <div class="main-content">
-        <!-- Sidebar Categories -->
+        <!-- Categorias da Barra Lateral -->
         <aside class="sidebar">
-            <h2>Categories</h2>
+            <h2>Categorias</h2>
             <ul>
-                <li><a href="#">Keyboards</a></li>
-                <li><a href="#">Mice</a></li>
+                <li><a href="#">Teclados</a></li>
+                <li><a href="#">Mouses</a></li>
                 <li><a href="#">Headsets</a></li>
-                <li><a href="#">Monitors</a></li>
-                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Monitores</a></li>
+                <li><a href="#">Acessórios</a></li>
             </ul>
         </aside>
 
-        <!-- Product Listing -->
+        <!-- Listagem de Produtos -->
         <section class="products">
             <div class="product-card">
-                <img src="../resources/teclado-mecanico1.jpeg" alt="Mechanical Keyboard">
-                <h3>Mechanical Keyboard</h3>
-                <p>Durable and responsive for gamers and professionals.</p>
-                <p class="price">$129.99</p>
-                <button onclick="addToCart(this, 'Mechanical Keyboard', 129.99)">Add to Cart</button>
-                <p class="review">⭐⭐⭐⭐⭐ (200 reviews)</p>
+                <img src="../resources/teclado-mecanico1.jpeg" alt="Teclado Mecânico">
+                <h3>Teclado Mecânico</h3>
+                <p>Durável e responsivo para gamers e profissionais.</p>
+                <p class="price">R$129,99</p>
+                <button onclick="addToCart(this, 'Teclado Mecânico', 129.99)">Adicionar ao Carrinho</button>
+                <p class="review">⭐⭐⭐⭐⭐ (200 avaliações)</p>
             </div>
             <div class="product-card">
-                <img src="../resources/mouse1.jpeg" alt="Gaming Mouse">
-                <h3>Gaming Mouse</h3>
-                <p>High precision with customizable buttons.</p>
-                <p class="price">$49.99</p>
-                <button onclick="addToCart(this, 'Gaming Mouse', 49.99)">Add to Cart</button>
-                <p class="review">⭐⭐⭐⭐ (150 reviews)</p>
+                <img src="../resources/mouse1.jpeg" alt="Mouse para Jogos">
+                <h3>Mouse para Jogos</h3>
+                <p>Alta precisão com botões personalizáveis.</p>
+                <p class="price">R$49,99</p>
+                <button onclick="addToCart(this, 'Mouse para Jogos', 49.99)">Adicionar ao Carrinho</button>
+                <p class="review">⭐⭐⭐⭐ (150 avaliações)</p>
             </div>
             <div class="product-card">
-                <img src="../resources/headset1.jpeg" alt="Gaming Headset">
-                <h3>Gaming Headset</h3>
-                <p>Immersive sound with a noise-canceling microphone.</p>
-                <p class="price">$89.99</p>
-                <button onclick="addToCart(this, 'Gaming Headset', 89.99)">Add to Cart</button>
-                <p class="review">⭐⭐⭐⭐⭐ (180 reviews)</p>
+                <img src="../resources/headset1.jpeg" alt="Headset para Jogos">
+                <h3>Headset para Jogos</h3>
+                <p>Som imersivo com um microfone com cancelamento de ruído.</p>
+                <p class="price">R$89,99</p>
+                <button onclick="addToCart(this, 'Headset para Jogos', 89.99)">Adicionar ao Carrinho</button>
+                <p class="review">⭐⭐⭐⭐⭐ (180 avaliações)</p>
             </div>
         </section>
     </div>
 
     <div class="see-more">
-        <button onclick="location.href='../pages/shop.html'">See More Products</button>
+        <button onclick="location.href='../pages/shop.html'">Ver Mais Produtos</button>
     </div>
 
-    <!-- Cart Modal -->
+    <!-- Modal do Carrinho -->
     <div id="cartModal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeCart()">&#10005;</button> <!-- Close Button -->
+            <button class="close-btn" onclick="closeCart()">&#10005;</button> <!-- Botão Fechar -->
             <div class="product-list">
                 <ul id="cartItems"></ul>
             </div>
             <div class="summary">
-                <h2>Summary</h2>
-                <p id="subtotal">Subtotal: $0.00</p>
-                <p id="tax">Tax: $0.00</p>
-                <p id="delivery">Delivery: $5.00</p>
-                <p class="total" id="total">Total: $5.00</p>
-                <button id="checkoutButton" onclick="proceedToCheckout()">Checkout</button>
+                <h2>Resumo</h2>
+                <p id="subtotal">Subtotal: R$0,00</p>
+                <p id="tax">Imposto: R$0,00</p>
+                <p id="delivery">Entrega: R$5,00</p>
+                <p class="total" id="total">Total: R$5,00</p>
+                <button id="checkoutButton" onclick="proceedToCheckout()">Finalizar Compra</button>
             </div>
         </div>
     </div>
 
-    <!-- Notification Message -->
+    <!-- Mensagem de Notificação -->
     <div id="notification" class="notification"></div>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Peripheral Hub - All Rights Reserved</p>
+        <p>&copy; 2024 Hub Periférico - Todos os Direitos Reservados</p>
         <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Serviço</a>
+            <a href="#">Fale Conosco</a>
         </div>
     </footer>
 
-    <script src="../scripts/index.js"></script> <!-- Link to external JavaScript -->
+    <script src="../scripts/index.js"></script> <!-- Link para JavaScript externo -->
 </body>
 
 </html>
