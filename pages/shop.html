@@ -1,82 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peripheral Hub - Shop</title>
+    <title>Hub Periférico - Loja</title>
     <link rel="stylesheet" href="../styles/shop.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Peripheral Hub - Shop</h1>
+        <h1>Hub Periférico - Loja</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html">Início</a>
+            <a href="shop.html">Loja</a>
+            <a href="about.html">Sobre</a>
+            <a href="contact.html">Contato</a>
         </nav>
         <div class="cart-icon" onclick="openCart()">
-            🛒 Cart (<span id="cartCount">0</span>)
+            🛒 Carrinho (<span id="cartCount">0</span>)
         </div>
     </header>
 
-    <!-- Main content container -->
+    <!-- Container principal de conteúdo -->
     <div class="content-container">
 
-        <!-- Sidebar Filter -->
+        <!-- Filtro da Barra Lateral -->
         <div class="sidebar">
-            <h3>Filter by</h3>
+            <h3>Filtrar por</h3>
 
             <div class="filter-group">
-                <h3>Price</h3>
-                <label for="priceRange">Up to $<span id="priceValue">1000</span></label>
+                <h3>Preço</h3>
+                <label for="priceRange">Até R$<span id="priceValue">1000</span></label>
                 <input type="range" id="priceRange" min="0" max="2000" step="10" value="2000">
             </div>
 
             <div class="filter-group">
-                <h3>Brand</h3>
+                <h3>Marca</h3>
                 <label>
-                    <input type="checkbox" id="brandA" value="Brand A"> Brand A
+                    <input type="checkbox" id="brandA" value="Brand A"> Marca A
                 </label>
                 <label>
-                    <input type="checkbox" id="brandB" value="Brand B"> Brand B
+                    <input type="checkbox" id="brandB" value="Brand B"> Marca B
                 </label>
             </div>
 
-            <button type="button" id="applyFilters">Apply Filters</button>
+            <button type="button" id="applyFilters">Aplicar Filtros</button>
         </div>
 
-        <!-- Main Product List -->
+        <!-- Lista Principal de Produtos -->
         <div class="products" id="productList">
-            <!-- Products will be dynamically inserted here -->
+            <!-- Produtos serão inseridos dinamicamente aqui -->
         </div>
 
     </div>
 
-    <!-- Cart Modal -->
+    <!-- Modal do Carrinho -->
     <div id="cartModal">
         <div class="modal-content">
             <div class="product-list">
                 <ul id="cartItems"></ul>
             </div>
             <div class="summary">
-                <h2>Summary</h2>
-                <p id="subtotal">Subtotal: $0.00</p>
-                <p id="tax">Tax: $0.00</p>
-                <p id="delivery">Delivery: $5.00</p>
-                <p class="total" id="total">Total: $5.00</p>
-                <button id="checkoutButton" onclick="checkout()">Checkout</button>
+                <h2>Resumo</h2>
+                <p id="subtotal">Subtotal: R$0,00</p>
+                <p id="tax">Imposto: R$0,00</p>
+                <p id="delivery">Entrega: R$5,00</p>
+                <p class="total" id="total">Total: R$5,00</p>
+                <button id="checkoutButton" onclick="checkout()">Finalizar Compra</button>
                 <div class="store-policy">
-                    <p>Store Policy: Pedro is a great guy. He is fair, honest, and always tries to give you the best experience possible. Trust in Pedro's service for all your peripheral needs!</p>
+                    <p>Política da Loja: Pedro é um cara incrível. Ele é justo, honesto e sempre tenta te proporcionar a melhor experiência possível. Confie no serviço do Pedro para todas as suas necessidades periféricas!</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Notification Message -->
+    <!-- Mensagem de Notificação -->
     <div id="notification" class="notification"></div>
 
     <script src="../scripts/shop.js"></script>
